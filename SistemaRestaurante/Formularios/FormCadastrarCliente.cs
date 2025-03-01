@@ -30,7 +30,7 @@ namespace SistemaRestaurante.Formularios
             cliente.email = txtEmail.Text;
             cliente.preferencias = txtPreferencias.Text;
             ClienteDAO insCliente = new ClienteDAO();
-            insCliente.Salvar(cliente);
+            insCliente.Cadastrar(cliente);
 
 
             txtNome.Clear();

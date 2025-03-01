@@ -15,7 +15,7 @@ namespace SistemaRestaurante.DAO
     {
 
 
-        public void Salvar(Cliente cliente)
+        public void Cadastrar(Cliente cliente)
         {
             try
             {
