@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaRestaurante.Formularios;
+
 
 namespace SistemaRestaurante
 {
@@ -15,6 +17,12 @@ namespace SistemaRestaurante
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btCasdatrar_Click(object sender, EventArgs e)
+        {
+            FormCadastrarCliente form = new FormCadastrarCliente();
+            form.ShowDialog();
         }
     }
 }
