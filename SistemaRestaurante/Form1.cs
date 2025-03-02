@@ -36,5 +36,11 @@ namespace SistemaRestaurante
             FormConsultarCliente form = new FormConsultarCliente();
             form.ShowDialog();
         }
+
+        private void btExluir_Click(object sender, EventArgs e)
+        {
+            FormExcluirCliente form = new FormExcluirCliente();
+            form.ShowDialog();
+        }
     }
 }

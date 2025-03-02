@@ -87,6 +87,7 @@
             this.btExluir.TabIndex = 4;
             this.btExluir.Text = "EXCLUIR";
             this.btExluir.UseVisualStyleBackColor = true;
+            this.btExluir.Click += new System.EventHandler(this.btExluir_Click);
             // 
             // Form1
             // 

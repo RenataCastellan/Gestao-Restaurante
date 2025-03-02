@@ -109,6 +109,33 @@ namespace SistemaRestaurante.DAO
                 MessageBox.Show("Erro ao atualizar o cliente: " + ex.Message);
             }
         }
+
+        public static bool ExcluirCliente(Cliente cliente)
+        {
+            try
+            {
+                string sql = "DELETE FROM Cliente WHERE cpf_cli = @cpf_cli";
+                MySqlCommand command = new MySqlCommand(sql, Conexao.Conectar());
+                command.Parameters.AddWithValue("@cpf_cli", cliente.cpf);
+                int linhasAfetadas = command.ExecuteNonQuery();
+
+                if (linhasAfetadas > 0)
+                {
+                    MessageBox.Show("cliente exluido com sucesso");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao excluir o cliente: " + ex.Message);
+                return false;
+            }
+        }
     }
 
 }
