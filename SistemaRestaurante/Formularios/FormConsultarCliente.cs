@@ -82,5 +82,17 @@ namespace SistemaRestaurante.Formularios
                 MessageBox.Show("Erro ao carregar clientes" + ex.Message);
             }
         }
+
+        private void btLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.Clear();
+            txtDataNasc.Clear();
+            txtTelefone.Clear();
+            txtEmail.Clear();
+            txtPreferencias.Clear();
+            txtCpf.Clear();
+
+            cbBuscarCliente.SelectedIndex = -1;
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace SistemaRestaurante.Formularios
 
             cliente.nome = txtNome.Text;
             cliente.cpf = txtCpf.Text;
-            cliente.dataNascimento = Convert.ToDateTime(txtDataNasc.Text);
+            cliente.dataNascimento = dtpDataNasc.Value; ;
             cliente.telefone = txtTelefone.Text;
             cliente.email = txtEmail.Text;
             cliente.preferencias = txtPreferencias.Text;
@@ -33,12 +33,17 @@ namespace SistemaRestaurante.Formularios
             insCliente.Cadastrar(cliente);
 
 
+            btLimpar_Click(sender, e);
+        }
+
+        private void btLimpar_Click(object sender, EventArgs e)
+        {
             txtNome.Clear();
-            txtCpf.Clear();
-            txtPreferencias.Clear();
-            txtDataNasc.Clear();
-            txtEmail.Clear();
+            dtpDataNasc.Value = DateTime.Today;
             txtTelefone.Clear();
+            txtEmail.Clear();
+            txtPreferencias.Clear();
+            txtCpf.Clear();
             txtNome.Select();
         }
     }

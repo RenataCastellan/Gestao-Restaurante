@@ -38,12 +38,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDataNasc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtpDataNasc = new System.Windows.Forms.DateTimePicker();
+            this.btLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbBuscarCliente
@@ -76,7 +77,7 @@
             // 
             // btAtualizar
             // 
-            this.btAtualizar.Location = new System.Drawing.Point(298, 319);
+            this.btAtualizar.Location = new System.Drawing.Point(212, 320);
             this.btAtualizar.Name = "btAtualizar";
             this.btAtualizar.Size = new System.Drawing.Size(143, 59);
             this.btAtualizar.TabIndex = 56;
@@ -132,13 +133,6 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "Tefone";
             // 
-            // txtDataNasc
-            // 
-            this.txtDataNasc.Location = new System.Drawing.Point(489, 143);
-            this.txtDataNasc.Name = "txtDataNasc";
-            this.txtDataNasc.Size = new System.Drawing.Size(100, 26);
-            this.txtDataNasc.TabIndex = 49;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -180,11 +174,30 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "Nome";
             // 
+            // dtpDataNasc
+            // 
+            this.dtpDataNasc.Location = new System.Drawing.Point(467, 143);
+            this.dtpDataNasc.Name = "dtpDataNasc";
+            this.dtpDataNasc.Size = new System.Drawing.Size(321, 26);
+            this.dtpDataNasc.TabIndex = 57;
+            // 
+            // btLimpar
+            // 
+            this.btLimpar.Location = new System.Drawing.Point(412, 320);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.Size = new System.Drawing.Size(143, 59);
+            this.btLimpar.TabIndex = 58;
+            this.btLimpar.Text = "LIMPAR";
+            this.btLimpar.UseVisualStyleBackColor = true;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
             // FormAtualizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btLimpar);
+            this.Controls.Add(this.dtpDataNasc);
             this.Controls.Add(this.btAtualizar);
             this.Controls.Add(this.txtPreferencias);
             this.Controls.Add(this.label7);
@@ -192,7 +205,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDataNasc);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.label3);
@@ -221,11 +233,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDataNasc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpDataNasc;
+        private System.Windows.Forms.Button btLimpar;
     }
 }

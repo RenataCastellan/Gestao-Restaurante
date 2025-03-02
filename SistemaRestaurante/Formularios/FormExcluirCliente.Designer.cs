@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btExcluir = new System.Windows.Forms.Button();
+            this.btLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbBuscarCliente
@@ -177,7 +178,7 @@
             // 
             // btExcluir
             // 
-            this.btExcluir.Location = new System.Drawing.Point(309, 342);
+            this.btExcluir.Location = new System.Drawing.Point(222, 347);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(131, 47);
             this.btExcluir.TabIndex = 44;
@@ -185,11 +186,22 @@
             this.btExcluir.UseVisualStyleBackColor = true;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
+            // btLimpar
+            // 
+            this.btLimpar.Location = new System.Drawing.Point(410, 347);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.Size = new System.Drawing.Size(139, 52);
+            this.btLimpar.TabIndex = 59;
+            this.btLimpar.Text = "LIMPAR";
+            this.btLimpar.UseVisualStyleBackColor = true;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
             // FormExcluirCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.btExcluir);
             this.Controls.Add(this.cbBuscarCliente);
             this.Controls.Add(this.btConsultar);
@@ -232,5 +244,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btExcluir;
+        private System.Windows.Forms.Button btLimpar;
     }
 }

@@ -119,5 +119,17 @@ namespace SistemaRestaurante.Formularios
                 MessageBox.Show("Selecione um cliente para excluir.");
             }
         }
+
+        private void btLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.Clear();
+            txtDataNasc.Clear();
+            txtTelefone.Clear();
+            txtEmail.Clear();
+            txtPreferencias.Clear();
+            txtCpf.Clear();
+
+            cbBuscarCliente.SelectedIndex = -1;
+        }
     }
 }

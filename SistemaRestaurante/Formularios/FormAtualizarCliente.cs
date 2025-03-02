@@ -38,7 +38,7 @@ namespace SistemaRestaurante.Formularios
                     if (cliente != null)
                     {
                         cliente.nome = txtNome.Text;
-                        cliente.dataNascimento = Convert.ToDateTime(txtDataNasc.Text);
+                        cliente.dataNascimento = dtpDataNasc.Value; 
                         cliente.telefone = txtTelefone.Text;
                         cliente.email = txtEmail.Text;
                         cliente.cpf = txtCpf.Text;
@@ -56,6 +56,8 @@ namespace SistemaRestaurante.Formularios
                 {
                     MessageBox.Show("Selecione um cliente para atualizar.");
                 }
+
+                btLimpar_Click(sender, e);
             }
             catch (Exception ex)
             {
@@ -78,11 +80,11 @@ namespace SistemaRestaurante.Formularios
                 if (cliente != null)
                 {
                     txtNome.Text = cliente.nome;
-                    txtDataNasc.Text = cliente.dataNascimento.ToString("dd/MM/yyyy");
+                    dtpDataNasc.Value = cliente.dataNascimento;
                     txtTelefone.Text = cliente.telefone;
                     txtEmail.Text = cliente.email;
                     txtPreferencias.Text = cliente.preferencias;
-                    txtCpf.Text = cliente.cpf;
+                    txtCpf.Text = cliente.cpf;                 
                 }
                 else
                 {
@@ -120,6 +122,18 @@ namespace SistemaRestaurante.Formularios
             {
                 MessageBox.Show("Erro ao carregar clientes" + ex.Message);
             }
+        }
+
+        private void btLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.Clear();
+            dtpDataNasc.Value = DateTime.Today;
+            txtTelefone.Clear();
+            txtEmail.Clear();
+            txtPreferencias.Clear();
+            txtCpf.Clear();
+
+            cbBuscarCliente.SelectedIndex = -1;
         }
     }
 }

@@ -25,7 +25,7 @@ namespace SistemaRestaurante.DAO
                 MySqlCommand command = new MySqlCommand(sql, Conexao.Conectar());
                 command.Parameters.AddWithValue("@nome_cli", cliente.nome);
                 command.Parameters.AddWithValue("@cpf_cli", cliente.cpf);
-                command.Parameters.AddWithValue("@dataNascimento_cli", cliente.dataNascimento);
+                command.Parameters.AddWithValue("@dataNascimento_cli", cliente.dataNascimento.ToString("yyyy-MM-dd"));
                 command.Parameters.AddWithValue("@telefone_cli", cliente.telefone);
                 command.Parameters.AddWithValue("@email_cli", cliente.email);
                 command.Parameters.AddWithValue("@preferenciasAlimentares_cli", cliente.preferencias);
@@ -57,7 +57,11 @@ namespace SistemaRestaurante.DAO
                     Cliente cliente = new Cliente();
                     cliente.nome = dados["nome_cli"].ToString();
                     cliente.cpf = dados["cpf_cli"].ToString();
-                    cliente.dataNascimento = Convert.ToDateTime(dados["dataNascimento_cli"]);
+                    //cliente.dataNascimento = Convert.ToDateTime(dados["dataNascimento_cli"]);
+                    if (dados["dataNascimento_cli"] != DBNull.Value)
+                    {
+                        cliente.dataNascimento = Convert.ToDateTime(dados["dataNascimento_cli"]);
+                    }
                     cliente.telefone = dados["telefone_cli"].ToString();
                     cliente.email = dados["email_cli"].ToString();
                     cliente.preferencias = dados["preferenciasAlimentares_cli"].ToString();
@@ -88,7 +92,7 @@ namespace SistemaRestaurante.DAO
                 MySqlCommand command = new MySqlCommand(sql, Conexao.Conectar());
                 command.Parameters.AddWithValue("@nome_cli", cliente.nome);
                 command.Parameters.AddWithValue("@cpf_cli", cliente.cpf);
-                command.Parameters.AddWithValue("@dataNascimento_cli", cliente.dataNascimento);
+                command.Parameters.AddWithValue("@dataNascimento_cli", cliente.dataNascimento.ToString("yyyy-MM-dd"));
                 command.Parameters.AddWithValue("@telefone_cli", cliente.telefone);
                 command.Parameters.AddWithValue("@email_cli", cliente.email);
                 command.Parameters.AddWithValue("@preferenciasAlimentares_cli", cliente.preferencias);

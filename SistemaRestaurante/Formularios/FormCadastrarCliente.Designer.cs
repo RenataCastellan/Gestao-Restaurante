@@ -33,7 +33,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDataNasc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +41,8 @@
             this.txtPreferencias = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btSalvar = new System.Windows.Forms.Button();
+            this.dtpDataNasc = new System.Windows.Forms.DateTimePicker();
+            this.btLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -84,13 +85,6 @@
             this.label3.Size = new System.Drawing.Size(40, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "CPF";
-            // 
-            // txtDataNasc
-            // 
-            this.txtDataNasc.Location = new System.Drawing.Point(486, 142);
-            this.txtDataNasc.Name = "txtDataNasc";
-            this.txtDataNasc.Size = new System.Drawing.Size(100, 26);
-            this.txtDataNasc.TabIndex = 6;
             // 
             // label4
             // 
@@ -151,7 +145,7 @@
             // 
             // btSalvar
             // 
-            this.btSalvar.Location = new System.Drawing.Point(295, 318);
+            this.btSalvar.Location = new System.Drawing.Point(171, 311);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(143, 59);
             this.btSalvar.TabIndex = 13;
@@ -159,11 +153,30 @@
             this.btSalvar.UseVisualStyleBackColor = true;
             this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
+            // dtpDataNasc
+            // 
+            this.dtpDataNasc.Location = new System.Drawing.Point(455, 142);
+            this.dtpDataNasc.Name = "dtpDataNasc";
+            this.dtpDataNasc.Size = new System.Drawing.Size(310, 26);
+            this.dtpDataNasc.TabIndex = 14;
+            // 
+            // btLimpar
+            // 
+            this.btLimpar.Location = new System.Drawing.Point(387, 311);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.Size = new System.Drawing.Size(143, 59);
+            this.btLimpar.TabIndex = 59;
+            this.btLimpar.Text = "LIMPAR";
+            this.btLimpar.UseVisualStyleBackColor = true;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
             // FormCadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btLimpar);
+            this.Controls.Add(this.dtpDataNasc);
             this.Controls.Add(this.btSalvar);
             this.Controls.Add(this.txtPreferencias);
             this.Controls.Add(this.label7);
@@ -171,7 +184,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDataNasc);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.label3);
@@ -192,7 +204,6 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDataNasc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label label5;
@@ -201,5 +212,7 @@
         private System.Windows.Forms.TextBox txtPreferencias;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btSalvar;
+        private System.Windows.Forms.DateTimePicker dtpDataNasc;
+        private System.Windows.Forms.Button btLimpar;
     }
 }

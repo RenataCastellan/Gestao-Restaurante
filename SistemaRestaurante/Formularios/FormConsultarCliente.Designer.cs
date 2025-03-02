@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbBuscarCliente = new System.Windows.Forms.ComboBox();
+            this.btLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btConsultar
@@ -175,11 +176,22 @@
             this.cbBuscarCliente.Size = new System.Drawing.Size(364, 28);
             this.cbBuscarCliente.TabIndex = 28;
             // 
+            // btLimpar
+            // 
+            this.btLimpar.Location = new System.Drawing.Point(286, 351);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.Size = new System.Drawing.Size(143, 59);
+            this.btLimpar.TabIndex = 59;
+            this.btLimpar.Text = "LIMPAR";
+            this.btLimpar.UseVisualStyleBackColor = true;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
             // FormConsultarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.cbBuscarCliente);
             this.Controls.Add(this.btConsultar);
             this.Controls.Add(this.txtPreferencias);
@@ -220,5 +232,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbBuscarCliente;
+        private System.Windows.Forms.Button btLimpar;
     }
 }
