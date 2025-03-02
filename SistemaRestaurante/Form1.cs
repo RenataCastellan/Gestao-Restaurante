@@ -24,5 +24,17 @@ namespace SistemaRestaurante
             FormCadastrarCliente form = new FormCadastrarCliente();
             form.ShowDialog();
         }
+
+        private void btAtualizar_Click(object sender, EventArgs e)
+        {
+            FormAtualizarCliente form = new FormAtualizarCliente();
+            form.ShowDialog();
+        }
+
+        private void btConsultar_Click(object sender, EventArgs e)
+        {
+            FormConsultarCliente form = new FormConsultarCliente();
+            form.ShowDialog();
+        }
     }
 }

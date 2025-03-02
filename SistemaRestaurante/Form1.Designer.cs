@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btCasdatrar = new System.Windows.Forms.Button();
             this.btAtualizar = new System.Windows.Forms.Button();
-            this.btListar = new System.Windows.Forms.Button();
+            this.btConsultar = new System.Windows.Forms.Button();
             this.btExluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,16 +65,18 @@
             this.btAtualizar.TabIndex = 2;
             this.btAtualizar.Text = "ATUALIZAR";
             this.btAtualizar.UseVisualStyleBackColor = true;
+            this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
             // 
-            // btListar
+            // btConsultar
             // 
-            this.btListar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btListar.Location = new System.Drawing.Point(230, 254);
-            this.btListar.Name = "btListar";
-            this.btListar.Size = new System.Drawing.Size(293, 38);
-            this.btListar.TabIndex = 3;
-            this.btListar.Text = "LISTAR";
-            this.btListar.UseVisualStyleBackColor = true;
+            this.btConsultar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConsultar.Location = new System.Drawing.Point(230, 254);
+            this.btConsultar.Name = "btConsultar";
+            this.btConsultar.Size = new System.Drawing.Size(293, 38);
+            this.btConsultar.TabIndex = 3;
+            this.btConsultar.Text = "CONSULTAR";
+            this.btConsultar.UseVisualStyleBackColor = true;
+            this.btConsultar.Click += new System.EventHandler(this.btConsultar_Click);
             // 
             // btExluir
             // 
@@ -92,7 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btExluir);
-            this.Controls.Add(this.btListar);
+            this.Controls.Add(this.btConsultar);
             this.Controls.Add(this.btAtualizar);
             this.Controls.Add(this.btCasdatrar);
             this.Controls.Add(this.label1);
@@ -108,7 +110,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btCasdatrar;
         private System.Windows.Forms.Button btAtualizar;
-        private System.Windows.Forms.Button btListar;
+        private System.Windows.Forms.Button btConsultar;
         private System.Windows.Forms.Button btExluir;
     }
 }

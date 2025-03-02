@@ -106,11 +106,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormAtualizarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormAtualizarCliente.Designer.cs">
+      <DependentUpon>FormAtualizarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormCadastrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FormCadastrarCliente.Designer.cs">
       <DependentUpon>FormCadastrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormConsultarCliente.Designer.cs">
+      <DependentUpon>FormConsultarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Program.cs" />
@@ -118,8 +130,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormAtualizarCliente.resx">
+      <DependentUpon>FormAtualizarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormCadastrarCliente.resx">
       <DependentUpon>FormCadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormConsultarCliente.resx">
+      <DependentUpon>FormConsultarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

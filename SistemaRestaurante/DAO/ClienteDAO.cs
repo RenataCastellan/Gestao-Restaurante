@@ -14,7 +14,6 @@ namespace SistemaRestaurante.DAO
     internal class ClienteDAO
     {
 
-
         public void Cadastrar(Cliente cliente)
         {
             try
@@ -41,5 +40,41 @@ namespace SistemaRestaurante.DAO
                 throw new Exception("Erro ao cadastrar o cliente: " + ex.Message);
             }
         }
+
+        public static List<Cliente> BuscarCliente()
+        {
+            List<Cliente> lista = new List<Cliente>();
+            string sql = "SELECT * FROM Cliente";
+
+            try
+            {
+
+                MySqlCommand command = new MySqlCommand(sql, Conexao.Conectar());
+                MySqlDataReader dados = command.ExecuteReader();
+
+                while (dados.Read())
+                {
+                    Cliente cliente = new Cliente();
+                    cliente.nome = dados["nome_cli"].ToString();
+                    cliente.cpf = dados["cpf_cli"].ToString();
+                    cliente.dataNascimento = Convert.ToDateTime(dados["dataNascimento_cli"]);
+                    cliente.telefone = dados["telefone_cli"].ToString();
+                    cliente.email = dados["email_cli"].ToString();
+                    cliente.preferencias = dados["preferenciasAlimentares_cli"].ToString();
+
+                    lista.Add(cliente);
+                }
+
+                dados.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+
+            return lista;
+            
+        }
     }
+
 }
