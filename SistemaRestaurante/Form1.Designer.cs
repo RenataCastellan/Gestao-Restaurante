@@ -33,6 +33,7 @@
             this.btAtualizar = new System.Windows.Forms.Button();
             this.btConsultar = new System.Windows.Forms.Button();
             this.btExluir = new System.Windows.Forms.Button();
+            this.btListar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +49,7 @@
             // btCasdatrar
             // 
             this.btCasdatrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCasdatrar.Location = new System.Drawing.Point(230, 115);
+            this.btCasdatrar.Location = new System.Drawing.Point(231, 90);
             this.btCasdatrar.Name = "btCasdatrar";
             this.btCasdatrar.Size = new System.Drawing.Size(293, 38);
             this.btCasdatrar.TabIndex = 1;
@@ -59,7 +60,7 @@
             // btAtualizar
             // 
             this.btAtualizar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAtualizar.Location = new System.Drawing.Point(230, 187);
+            this.btAtualizar.Location = new System.Drawing.Point(231, 162);
             this.btAtualizar.Name = "btAtualizar";
             this.btAtualizar.Size = new System.Drawing.Size(293, 38);
             this.btAtualizar.TabIndex = 2;
@@ -70,7 +71,7 @@
             // btConsultar
             // 
             this.btConsultar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConsultar.Location = new System.Drawing.Point(230, 254);
+            this.btConsultar.Location = new System.Drawing.Point(231, 229);
             this.btConsultar.Name = "btConsultar";
             this.btConsultar.Size = new System.Drawing.Size(293, 38);
             this.btConsultar.TabIndex = 3;
@@ -81,7 +82,7 @@
             // btExluir
             // 
             this.btExluir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExluir.Location = new System.Drawing.Point(230, 329);
+            this.btExluir.Location = new System.Drawing.Point(231, 304);
             this.btExluir.Name = "btExluir";
             this.btExluir.Size = new System.Drawing.Size(293, 38);
             this.btExluir.TabIndex = 4;
@@ -89,11 +90,23 @@
             this.btExluir.UseVisualStyleBackColor = true;
             this.btExluir.Click += new System.EventHandler(this.btExluir_Click);
             // 
+            // btListar
+            // 
+            this.btListar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btListar.Location = new System.Drawing.Point(231, 377);
+            this.btListar.Name = "btListar";
+            this.btListar.Size = new System.Drawing.Size(293, 38);
+            this.btListar.TabIndex = 5;
+            this.btListar.Text = "LISTAR";
+            this.btListar.UseVisualStyleBackColor = true;
+            this.btListar.Click += new System.EventHandler(this.btListar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btListar);
             this.Controls.Add(this.btExluir);
             this.Controls.Add(this.btConsultar);
             this.Controls.Add(this.btAtualizar);
@@ -113,6 +126,7 @@
         private System.Windows.Forms.Button btAtualizar;
         private System.Windows.Forms.Button btConsultar;
         private System.Windows.Forms.Button btExluir;
+        private System.Windows.Forms.Button btListar;
     }
 }
 

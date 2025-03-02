@@ -121,7 +121,6 @@ namespace SistemaRestaurante.DAO
 
                 if (linhasAfetadas > 0)
                 {
-                    MessageBox.Show("cliente exluido com sucesso");
                     return true;
                 }
                 else
@@ -135,6 +134,39 @@ namespace SistemaRestaurante.DAO
                 MessageBox.Show("Erro ao excluir o cliente: " + ex.Message);
                 return false;
             }
+        }
+
+        public static List<Cliente> ListarCliente()
+        {
+            List<Cliente> listaCliente = new List<Cliente>();
+
+            try
+            {
+                string sql = "SELECT * FROM Cliente";
+
+                MySqlCommand command = new MySqlCommand(sql, Conexao.Conectar());
+                MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Cliente cliente = new Cliente();
+                    cliente.nome = reader["nome_cli"].ToString();
+                    cliente.cpf = reader["cpf_cli"].ToString();
+                    cliente.dataNascimento = Convert.ToDateTime(reader["dataNascimento_cli"]);
+                    cliente.telefone = reader["telefone_cli"].ToString();
+                    cliente.email = reader["email_cli"].ToString();
+
+                    listaCliente.Add(cliente);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao listar os clientes" + ex.Message);
+            }
+
+            return listaCliente;
         }
     }
 

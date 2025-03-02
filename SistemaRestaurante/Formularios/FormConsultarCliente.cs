@@ -42,7 +42,7 @@ namespace SistemaRestaurante.Formularios
                     txtTelefone.Text = cliente.telefone;
                     txtEmail.Text = cliente.email;
                     txtPreferencias.Text = cliente.preferencias;
-                    txtCpf.Text = cliente.preferencias;
+                    txtCpf.Text = cliente.cpf;
                 }
                 else
                 {
