@@ -82,11 +82,5 @@ namespace SistemaRestaurante.Formularios
                 MessageBox.Show("Erro ao carregar clientes" + ex.Message);
             }
         }
-
-        private void FormConsultarCliente_Shown(object sender, EventArgs e)
-        {
-            // Colocar o foco no ComboBox após o formulário ser mostrado
-            cbBuscarCliente.Focus();
-        }
     }
 }

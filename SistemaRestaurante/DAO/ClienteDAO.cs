@@ -75,6 +75,40 @@ namespace SistemaRestaurante.DAO
             return lista;
             
         }
+
+
+        public static void AtualizarCliente(Cliente cliente)
+        {
+            try
+            {
+                string sql = "UPDATE Cliente SET nome_cli = @nome_cli, dataNascimento_cli = @dataNascimento_cli, " +
+                     "telefone_cli = @telefone_cli, email_cli = @email_cli, preferenciasAlimentares_cli = @preferenciasAlimentares_cli " +
+                     "WHERE cpf_cli = @cpf_cli";
+
+                MySqlCommand command = new MySqlCommand(sql, Conexao.Conectar());
+                command.Parameters.AddWithValue("@nome_cli", cliente.nome);
+                command.Parameters.AddWithValue("@cpf_cli", cliente.cpf);
+                command.Parameters.AddWithValue("@dataNascimento_cli", cliente.dataNascimento);
+                command.Parameters.AddWithValue("@telefone_cli", cliente.telefone);
+                command.Parameters.AddWithValue("@email_cli", cliente.email);
+                command.Parameters.AddWithValue("@preferenciasAlimentares_cli", cliente.preferencias);
+
+
+                int linhasAfetadas = command.ExecuteNonQuery();
+                if (linhasAfetadas > 0)
+                {
+                    MessageBox.Show("Cliente atualizado com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Nenhuma Alteração foi realizada. Verifique o nome informado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar o cliente: " + ex.Message);
+            }
+        }
     }
 
 }
