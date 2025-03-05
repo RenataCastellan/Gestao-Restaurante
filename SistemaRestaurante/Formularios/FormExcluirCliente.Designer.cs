@@ -30,6 +30,9 @@
         {
             this.cbBuscarCliente = new System.Windows.Forms.ComboBox();
             this.btConsultar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btExcluir = new System.Windows.Forms.Button();
+            this.btLimpar = new System.Windows.Forms.Button();
             this.txtPreferencias = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -42,169 +45,178 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btExcluir = new System.Windows.Forms.Button();
-            this.btLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbBuscarCliente
             // 
             this.cbBuscarCliente.FormattingEnabled = true;
-            this.cbBuscarCliente.Location = new System.Drawing.Point(209, 60);
+            this.cbBuscarCliente.Location = new System.Drawing.Point(135, 64);
             this.cbBuscarCliente.Name = "cbBuscarCliente";
             this.cbBuscarCliente.Size = new System.Drawing.Size(364, 28);
             this.cbBuscarCliente.TabIndex = 43;
             // 
             // btConsultar
             // 
-            this.btConsultar.Location = new System.Drawing.Point(607, 50);
+            this.btConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
+            this.btConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConsultar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btConsultar.Location = new System.Drawing.Point(505, 56);
             this.btConsultar.Name = "btConsultar";
-            this.btConsultar.Size = new System.Drawing.Size(125, 42);
+            this.btConsultar.Size = new System.Drawing.Size(144, 42);
             this.btConsultar.TabIndex = 42;
             this.btConsultar.Text = "CONSULTAR";
-            this.btConsultar.UseVisualStyleBackColor = true;
+            this.btConsultar.UseVisualStyleBackColor = false;
             this.btConsultar.Click += new System.EventHandler(this.btConsultar_Click);
-            // 
-            // txtPreferencias
-            // 
-            this.txtPreferencias.Location = new System.Drawing.Point(487, 266);
-            this.txtPreferencias.Name = "txtPreferencias";
-            this.txtPreferencias.ReadOnly = true;
-            this.txtPreferencias.Size = new System.Drawing.Size(100, 26);
-            this.txtPreferencias.TabIndex = 41;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(483, 243);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 20);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "Preferencias";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(309, 266);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(100, 26);
-            this.txtEmail.TabIndex = 39;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(305, 243);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 20);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Email";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(148, 266);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.ReadOnly = true;
-            this.txtTelefone.Size = new System.Drawing.Size(100, 26);
-            this.txtTelefone.TabIndex = 37;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(144, 243);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Tefone";
-            // 
-            // txtDataNasc
-            // 
-            this.txtDataNasc.Location = new System.Drawing.Point(487, 161);
-            this.txtDataNasc.Name = "txtDataNasc";
-            this.txtDataNasc.ReadOnly = true;
-            this.txtDataNasc.Size = new System.Drawing.Size(100, 26);
-            this.txtDataNasc.TabIndex = 35;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(483, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 20);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Data Nascimento";
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(309, 161);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.ReadOnly = true;
-            this.txtCpf.Size = new System.Drawing.Size(100, 26);
-            this.txtCpf.TabIndex = 33;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(305, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 20);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "CPF";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(148, 161);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.ReadOnly = true;
-            this.txtNome.Size = new System.Drawing.Size(100, 26);
-            this.txtNome.TabIndex = 31;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(144, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Nome";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 61);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(199, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 20);
+            this.label1.Size = new System.Drawing.Size(201, 25);
             this.label1.TabIndex = 29;
-            this.label1.Text = "CONSULTAR CLIENTE";
+            this.label1.Text = "EXCLUIR CLIENTE";
             // 
             // btExcluir
             // 
-            this.btExcluir.Location = new System.Drawing.Point(222, 347);
+            this.btExcluir.BackColor = System.Drawing.Color.Khaki;
+            this.btExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btExcluir.Location = new System.Drawing.Point(204, 367);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(131, 47);
             this.btExcluir.TabIndex = 44;
             this.btExcluir.Text = "EXCLUIR";
-            this.btExcluir.UseVisualStyleBackColor = true;
+            this.btExcluir.UseVisualStyleBackColor = false;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // btLimpar
             // 
-            this.btLimpar.Location = new System.Drawing.Point(410, 347);
+            this.btLimpar.BackColor = System.Drawing.Color.IndianRed;
+            this.btLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLimpar.Location = new System.Drawing.Point(402, 367);
             this.btLimpar.Name = "btLimpar";
-            this.btLimpar.Size = new System.Drawing.Size(139, 52);
+            this.btLimpar.Size = new System.Drawing.Size(131, 47);
             this.btLimpar.TabIndex = 59;
             this.btLimpar.Text = "LIMPAR";
-            this.btLimpar.UseVisualStyleBackColor = true;
+            this.btLimpar.UseVisualStyleBackColor = false;
             this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
+            // txtPreferencias
+            // 
+            this.txtPreferencias.Location = new System.Drawing.Point(485, 232);
+            this.txtPreferencias.Multiline = true;
+            this.txtPreferencias.Name = "txtPreferencias";
+            this.txtPreferencias.ReadOnly = true;
+            this.txtPreferencias.Size = new System.Drawing.Size(164, 61);
+            this.txtPreferencias.TabIndex = 71;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(481, 209);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 20);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "Preferencias";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(135, 286);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(100, 26);
+            this.txtEmail.TabIndex = 69;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(131, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.TabIndex = 68;
+            this.label6.Text = "Email";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(135, 211);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.ReadOnly = true;
+            this.txtTelefone.Size = new System.Drawing.Size(100, 26);
+            this.txtTelefone.TabIndex = 67;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(131, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "Tefone";
+            // 
+            // txtDataNasc
+            // 
+            this.txtDataNasc.Location = new System.Drawing.Point(313, 211);
+            this.txtDataNasc.Name = "txtDataNasc";
+            this.txtDataNasc.ReadOnly = true;
+            this.txtDataNasc.Size = new System.Drawing.Size(128, 26);
+            this.txtDataNasc.TabIndex = 65;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(309, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 20);
+            this.label4.TabIndex = 64;
+            this.label4.Text = "Data Nascimento";
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Location = new System.Drawing.Point(313, 286);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.ReadOnly = true;
+            this.txtCpf.Size = new System.Drawing.Size(128, 26);
+            this.txtCpf.TabIndex = 63;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(309, 258);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 20);
+            this.label3.TabIndex = 62;
+            this.label3.Text = "CPF";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(135, 133);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
+            this.txtNome.Size = new System.Drawing.Size(514, 26);
+            this.txtNome.TabIndex = 61;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(131, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Nome";
             // 
             // FormExcluirCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btLimpar);
-            this.Controls.Add(this.btExcluir);
-            this.Controls.Add(this.cbBuscarCliente);
-            this.Controls.Add(this.btConsultar);
             this.Controls.Add(this.txtPreferencias);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtEmail);
@@ -217,6 +229,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.btLimpar);
+            this.Controls.Add(this.btExcluir);
+            this.Controls.Add(this.cbBuscarCliente);
+            this.Controls.Add(this.btConsultar);
             this.Controls.Add(this.label1);
             this.Name = "FormExcluirCliente";
             this.Text = "Excluir Cliente";
@@ -230,6 +246,9 @@
 
         private System.Windows.Forms.ComboBox cbBuscarCliente;
         private System.Windows.Forms.Button btConsultar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btExcluir;
+        private System.Windows.Forms.Button btLimpar;
         private System.Windows.Forms.TextBox txtPreferencias;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtEmail;
@@ -242,8 +261,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btExcluir;
-        private System.Windows.Forms.Button btLimpar;
     }
 }

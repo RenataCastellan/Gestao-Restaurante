@@ -21,6 +21,17 @@ namespace SistemaRestaurante.Formularios
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(txtNome.Text) ||
+               string.IsNullOrWhiteSpace(txtCpf.Text) ||
+               string.IsNullOrWhiteSpace(txtTelefone.Text) ||
+               string.IsNullOrWhiteSpace(txtEmail.Text) ||
+               string.IsNullOrWhiteSpace(txtPreferencias.Text))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos antes de cadastrar!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             Cliente cliente = new Cliente();
 
             cliente.nome = txtNome.Text;
@@ -45,6 +56,11 @@ namespace SistemaRestaurante.Formularios
             txtPreferencias.Clear();
             txtCpf.Clear();
             txtNome.Select();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

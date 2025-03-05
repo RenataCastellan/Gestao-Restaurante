@@ -92,9 +92,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(231, 62);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(158, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 20);
+            this.label1.Size = new System.Drawing.Size(464, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "RELAÇÃO DE CADASTRO DE CLIENTES";
             // 
@@ -102,11 +103,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtGridViewCliente);
             this.Name = "FormListarCliente";
-            this.Text = "FormListarCliente";
+            this.Text = "Lista de Clientes Cadastrados";
             this.Load += new System.EventHandler(this.FormListarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridViewCliente)).EndInit();
             this.ResumeLayout(false);
