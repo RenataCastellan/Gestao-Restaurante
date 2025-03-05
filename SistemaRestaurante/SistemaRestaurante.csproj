@@ -181,9 +181,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interface\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\restaurant_plate_cutlery_food_icon_210180.png" />
   </ItemGroup>
