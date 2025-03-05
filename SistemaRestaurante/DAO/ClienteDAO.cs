@@ -32,8 +32,6 @@ namespace SistemaRestaurante.DAO
 
                 command.ExecuteNonQuery();
 
-                MessageBox.Show("Cadastro realizadao com sucesso");
-
             }
             catch (Exception ex)
             {
@@ -55,9 +53,9 @@ namespace SistemaRestaurante.DAO
                 while (dados.Read())
                 {
                     Cliente cliente = new Cliente();
+                    cliente.id_cliente = Convert.ToInt32(dados["id_cli"]);
                     cliente.nome = dados["nome_cli"].ToString();
                     cliente.cpf = dados["cpf_cli"].ToString();
-                    //cliente.dataNascimento = Convert.ToDateTime(dados["dataNascimento_cli"]);
                     if (dados["dataNascimento_cli"] != DBNull.Value)
                     {
                         cliente.dataNascimento = Convert.ToDateTime(dados["dataNascimento_cli"]);
@@ -85,9 +83,9 @@ namespace SistemaRestaurante.DAO
         {
             try
             {
-                string sql = "UPDATE Cliente SET nome_cli = @nome_cli, dataNascimento_cli = @dataNascimento_cli, " +
+                string sql = "UPDATE Cliente SET nome_cli = @nome_cli, cpf_cli = @cpf_cli, dataNascimento_cli = @dataNascimento_cli, " +
                      "telefone_cli = @telefone_cli, email_cli = @email_cli, preferenciasAlimentares_cli = @preferenciasAlimentares_cli " +
-                     "WHERE cpf_cli = @cpf_cli";
+                     "WHERE id_cli = @id_cli";
 
                 MySqlCommand command = new MySqlCommand(sql, Conexao.Conectar());
                 command.Parameters.AddWithValue("@nome_cli", cliente.nome);
@@ -96,16 +94,17 @@ namespace SistemaRestaurante.DAO
                 command.Parameters.AddWithValue("@telefone_cli", cliente.telefone);
                 command.Parameters.AddWithValue("@email_cli", cliente.email);
                 command.Parameters.AddWithValue("@preferenciasAlimentares_cli", cliente.preferencias);
+                command.Parameters.AddWithValue("@id_cli", cliente.id_cliente);
 
 
                 int linhasAfetadas = command.ExecuteNonQuery();
                 if (linhasAfetadas > 0)
                 {
-                    MessageBox.Show("Cliente atualizado com sucesso!");
+                    MessageBox.Show("Cliente atualizado com sucesso!", "Atualização Completa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Nenhuma Alteração foi realizada. Verifique o nome informado.");
+                    MessageBox.Show("Nenhuma Alteração foi realizada");
                 }
             }
             catch (Exception ex)

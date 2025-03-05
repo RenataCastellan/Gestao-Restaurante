@@ -44,6 +44,7 @@ namespace SistemaRestaurante.Formularios
                 dtGridViewCliente.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dtGridViewCliente.AllowUserToResizeRows = false;
                 dtGridViewCliente.AllowUserToAddRows = false;
+       
             }
             catch (Exception ex)
             {

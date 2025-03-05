@@ -24,6 +24,7 @@ namespace SistemaRestaurante.Formularios
 
         }
 
+        private int idClienteSelecionado = -1;
         private List<Cliente> lista = new List<Cliente>();
 
         private void btAtualizar_Click_1(object sender, EventArgs e)
@@ -43,8 +44,18 @@ namespace SistemaRestaurante.Formularios
                         cliente.email = txtEmail.Text;
                         cliente.cpf = txtCpf.Text;
                         cliente.preferencias= txtPreferencias.Text;
+                        cliente.id_cliente = idClienteSelecionado;
 
                         ClienteDAO.AtualizarCliente(cliente);
+
+                        lista = ClienteDAO.BuscarCliente();
+                        cbBuscarCliente.Items.Clear();
+                        foreach (Cliente c in lista)
+                        {
+                            cbBuscarCliente.Items.Add(c.nome);
+                        }
+
+                        cbBuscarCliente.SelectedItem = nomeSelecionado;
                     }
                     else
                     {
@@ -84,7 +95,9 @@ namespace SistemaRestaurante.Formularios
                     txtTelefone.Text = cliente.telefone;
                     txtEmail.Text = cliente.email;
                     txtPreferencias.Text = cliente.preferencias;
-                    txtCpf.Text = cliente.cpf;                 
+                    txtCpf.Text = cliente.cpf;
+
+                    idClienteSelecionado = cliente.id_cliente;
                 }
                 else
                 {

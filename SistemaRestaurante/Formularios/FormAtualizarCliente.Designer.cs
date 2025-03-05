@@ -85,7 +85,7 @@
             this.btAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAtualizar.Location = new System.Drawing.Point(193, 354);
             this.btAtualizar.Name = "btAtualizar";
-            this.btAtualizar.Size = new System.Drawing.Size(124, 51);
+            this.btAtualizar.Size = new System.Drawing.Size(137, 51);
             this.btAtualizar.TabIndex = 56;
             this.btAtualizar.Text = "ATUALIZAR";
             this.btAtualizar.UseVisualStyleBackColor = false;
@@ -199,7 +199,7 @@
             this.btLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLimpar.Location = new System.Drawing.Point(417, 354);
             this.btLimpar.Name = "btLimpar";
-            this.btLimpar.Size = new System.Drawing.Size(128, 51);
+            this.btLimpar.Size = new System.Drawing.Size(139, 51);
             this.btLimpar.TabIndex = 58;
             this.btLimpar.Text = "LIMPAR";
             this.btLimpar.UseVisualStyleBackColor = false;

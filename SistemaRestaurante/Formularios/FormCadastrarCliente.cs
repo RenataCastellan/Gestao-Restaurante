@@ -42,6 +42,7 @@ namespace SistemaRestaurante.Formularios
             cliente.preferencias = txtPreferencias.Text;
             ClienteDAO insCliente = new ClienteDAO();
             insCliente.Cadastrar(cliente);
+            MessageBox.Show("Cliente cadastrado com sucesso!", "Cadastro Completo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             btLimpar_Click(sender, e);
